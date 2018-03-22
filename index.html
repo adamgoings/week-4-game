@@ -9,7 +9,7 @@
 <body>
   <h1>Crystal Collector!</h1>
 
-  <div>
+  <div id="body-text">
     <p>You will be given a random number at the beginning of the game.</p>
 
     <p>There are four crystals below. By clicking on crystal you will add a specific amount of points to your total score</p>
@@ -22,11 +22,11 @@
   </div>
 
   <div>
-    <div>
+    <div id="random-score-div">
       <div><span id="random-score"></span></div>
     </div>
 
-    <div>
+    <div id="wins-losses-div">
       <p>Wins:<span id="wins"></span></p>
       <p>Losses:<span id="losses"></span></p>
     </div>
@@ -49,13 +49,22 @@
     <img src="assets/images/crystal4.jpeg" alt="crystal image">
   </a>
 
-  <div>
+  <div id="total-score-div">
     <p>Your total score is:<span id="total-score"></span></p>
   </div>
 
-  <div>
+  <div id="user-score-div">
     <span id="user-score"></span>
   </div>
+
+  <!-- Referencing jQuery -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+  <!-- Referencing my javascript file -->
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
 

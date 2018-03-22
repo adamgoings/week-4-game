@@ -17,6 +17,10 @@ h1 {
 #random-score-div {
   background-color: teal;
   width: 25%;
+  color: white;
+  font-weight: bolder;
+  font-size: 48px;
+  padding-bottom: 25px;
 }
 
 #wins-losses-div {
