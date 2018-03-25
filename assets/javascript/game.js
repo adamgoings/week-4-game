@@ -17,66 +17,59 @@ console.log(randomCrystal2);
 
 $(document).ready(function() {
 //start or reset the game
-startGame();
-
-//display the random score in the appropriate html span
-// $("#random-score").html(randomNum);
+  startGame();
 
 //display total number of wins and losses and playerScore
-$("#wins").html(" " + winsCounter);
-$("#losses").html(" " + lossCounter);
+  $("#wins").html(" " + winsCounter);
+  $("#losses").html(" " + lossCounter);
 // $("#user-score").html(" " + playerScore);
 
 //when any crystal is clicked add it to the aggregate player score
-$("#crystal1").on('click', function() {
-  $("#user-score").html(playerScore += randomCrystal1);
-  winOrLose();
-});
+  $("#crystal1").on('click', function() {
+    $("#user-score").html(playerScore += randomCrystal1);
+    winOrLose();
+  });
 
-$("#crystal2").on('click', function() {
-  $("#user-score").html(playerScore += randomCrystal2);
-  winOrLose();
-});
+  $("#crystal2").on('click', function() {
+    $("#user-score").html(playerScore += randomCrystal2);
+    winOrLose();
+  });
 
-$("#crystal3").on('click', function() {
-  $("#user-score").html(playerScore += randomCrystal3);
-  winOrLose();
-});
+  $("#crystal3").on('click', function() {
+    $("#user-score").html(playerScore += randomCrystal3);
+    winOrLose();
+  });
 
-$("#crystal4").on('click', function() {
-  $("#user-score").html(playerScore += randomCrystal4);
-  winOrLose();
-});
+  $("#crystal4").on('click', function() {
+    $("#user-score").html(playerScore += randomCrystal4);
+    winOrLose();
+  });
 
-console.log(playerScore);
+  console.log(playerScore);
 
-//when player score equals randomNum, wins go up by 1
-function winOrLose() {
-  if (playerScore === randomNum) {
-  winsCounter++;
-  $("#wins").html(" " + winsCounter);
-  startGame();
-} else if (playerScore > randomNum) {
-  lossCounter++;
-  $("#losses").html(" " + lossCounter);
-  startGame();
+//when player score equals randomNum, wins go up by 1; if I go over, the losses go up by 1
+  function winOrLose() {
+      if (playerScore === randomNum) {
+      winsCounter++;
+      $("#wins").html(" " + winsCounter);
+      startGame();
+  } else if (playerScore > randomNum) {
+      lossCounter++;
+      $("#losses").html(" " + lossCounter);
+      startGame();
+    }
   }
-}
 
-function startGame() {
-  randomNum = Math.floor((Math.random() * 120) + 19);
-  randomCrystal1 = Math.floor((Math.random() * 12) + 1);
-  randomCrystal2 = Math.floor((Math.random() * 12) + 1);
-  randomCrystal3 = Math.floor((Math.random() * 12) + 1);
-  randomCrystal4 = Math.floor((Math.random() * 12) + 1);
-  playerScore = 0;
+//this function resets the game after each win or loss
+  function startGame() {
+    randomNum = Math.floor((Math.random() * 120) + 19);
+    randomCrystal1 = Math.floor((Math.random() * 12) + 1);
+    randomCrystal2 = Math.floor((Math.random() * 12) + 1);
+    randomCrystal3 = Math.floor((Math.random() * 12) + 1);
+    randomCrystal4 = Math.floor((Math.random() * 12) + 1);
+    playerScore = 0;
 
-  $("#random-score").html(randomNum);
-  $("#user-score").html(" " + playerScore);
-}
-
-
-
-
-
+    $("#random-score").html(randomNum);
+    $("#user-score").html(" " + playerScore);
+  }
 }); 
