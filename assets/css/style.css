@@ -1,6 +1,6 @@
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-image: url("assets/images/spiration-light.png");
+  background-image: url("../../assets/images/background.png");
 }
 
 h1 {
@@ -26,9 +26,13 @@ h1 {
 #wins-losses-div {
   background-color: forestgreen;
   width: 30%;
+  font-size: 28px;
 }
 
 #total-score-div, #user-score-div {
   background-color: palevioletred;
   width: 25%;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
 }
